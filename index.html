@@ -1,0 +1,1123 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Love Story ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #e8a1b4;
+  --dark-pink: #bd718b;
+  --light-pink: #fff0f3;
+  --cream: #fffaf5;
+  --text: #634550;
+  --muted: #9b7d87;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* HEART ANIMATION */
+
+.heart {
+  position: fixed;
+  top: -30px;
+  z-index: 10;
+  pointer-events: none;
+  animation: fall linear forwards;
+  opacity: .7;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* WELCOME PAGE */
+
+#welcome {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, #ffe3eb, transparent 40%),
+    radial-gradient(circle at 80% 80%, #f7dce5, transparent 40%),
+    linear-gradient(135deg, #fffaf5, #fff0f3);
+}
+
+.welcome-card {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+  animation: appear 1.5s ease;
+}
+
+.small-label {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--dark-pink);
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+.welcome-card h1 {
+  font-size: clamp(42px, 8vw, 78px);
+  color: #a85e78;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.welcome-card p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 35px;
+}
+
+.primary-btn {
+  border: none;
+  padding: 15px 30px;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(135deg, #d98ba5, #bd718b);
+  box-shadow: 0 10px 25px #d98ba544;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px #d98ba566;
+}
+
+@keyframes appear {
+  from {opacity: 0; transform: translateY(25px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* MAIN WEBSITE */
+
+#main {
+  animation: appear 1s ease;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fffaf5ee;
+  backdrop-filter: blur(12px);
+  padding: 17px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f5e3e8;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+  color: var(--dark-pink);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-size: 12px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: var(--dark-pink);
+}
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #fff0f3, #fffaf5);
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 70px);
+  color: #a85e78;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.hero .heart-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% {transform: scale(1.2);}
+}
+
+.section {
+  padding: 90px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  color: #a85e78;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.divider-heart {
+  color: var(--pink);
+  margin-top: 15px;
+}
+
+/* GALLERY */
+
+.gallery-section {
+  background: white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.photo-card {
+  padding: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 7px 25px #a85e7812;
+  border: 1px solid #f8e8ed;
+  transition: .4s;
+  animation: appear .8s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 15px 35px #a85e7825;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: zoom-in;
+}
+
+.photo-card p {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 21px;
+  color: var(--dark-pink);
+  padding: 13px 5px 5px;
+}
+
+.add-photo {
+  display: block;
+  margin: 35px auto 0;
+  padding: 13px 24px;
+  background: var(--light-pink);
+  border: 1px dashed var(--pink);
+  border-radius: 30px;
+  color: var(--dark-pink);
+  font-weight: 600;
+}
+
+.add-photo:hover {
+  background: #f9dce5;
+}
+
+/* APOLOGY */
+
+.apology-section {
+  background: linear-gradient(135deg, #fff5f5, #fffaf5);
+}
+
+.apology-card {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: clamp(25px, 6vw, 65px);
+  border-radius: 20px;
+  box-shadow: 0 15px 45px #bd718b13;
+  border: 1px solid #f5e5e9;
+  text-align: center;
+}
+
+.apology-card .big-heart {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.apology-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: #a85e78;
+  margin-bottom: 25px;
+}
+
+.apology-card p {
+  font-size: 14px;
+  line-height: 2.1;
+  color: #856b75;
+  margin-bottom: 18px;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: var(--dark-pink);
+  margin-top: 25px;
+}
+
+/* TIMELINE */
+
+.timeline-section {
+  background: white;
+}
+
+.timeline {
+  max-width: 750px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #f1c6d3;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '♥';
+  position: absolute;
+  left: 9px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #d98ba5;
+  color: white;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.timeline-item h3 {
+  font-family: 'Playfair Display', serif;
+  color: #a85e78;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.timeline-item span {
+  color: var(--dark-pink);
+  font-size: 12px;
+}
+
+.timeline-item p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 8px;
+}
+
+/* LOVE LETTER */
+
+.letter-section {
+  background: #fff4f6;
+  text-align: center;
+}
+
+.envelope {
+  width: min(340px, 90%);
+  height: 210px;
+  margin: 35px auto;
+  background: #e8a1b4;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 15px 30px #bd718b33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s;
+}
+
+.envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-left: 170px solid transparent;
+  border-right: 170px solid transparent;
+  border-top: 120px solid #d98ba5;
+  transform-origin: top;
+  transition: .6s;
+  z-index: 3;
+}
+
+.envelope.open::before {
+  transform: rotateX(180deg);
+}
+
+.envelope-label {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+}
+
+.letter-content {
+  display: none;
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 35px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 35px #bd718b15;
+  text-align: left;
+  line-height: 2;
+  color: #856b75;
+  animation: appear .8s ease;
+}
+
+.letter-content h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: var(--dark-pink);
+  margin-bottom: 15px;
+}
+
+.letter-content p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ENDING */
+
+.ending {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #fce5eb, #fff8f3);
+}
+
+.ending h2 {
+  font-family: 'Playfair Display', serif;
+  color: #a85e78;
+  font-size: clamp(28px, 5vw, 43px);
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+.ending p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.answer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.answer-buttons button {
+  padding: 14px 24px;
+  border-radius: 35px;
+  border: 1px solid #d98ba5;
+  background: white;
+  color: var(--dark-pink);
+  font-weight: 600;
+  transition: .3s;
+}
+
+.answer-buttons button:first-child {
+  background: #d98ba5;
+  color: white;
+}
+
+.answer-buttons button:hover {
+  transform: translateY(-4px);
+}
+
+#response {
+  margin: 30px auto 0;
+  max-width: 550px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  color: #a85e78;
+  line-height: 1.8;
+  display: none;
+}
+
+/* MUSIC BUTTON */
+
+.music-btn {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 30;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #d98ba5;
+  border: none;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 5px 20px #bd718b55;
+}
+
+footer {
+  padding: 30px 15px;
+  text-align: center;
+  background: white;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer span {
+  color: var(--dark-pink);
+}
+
+/* IMAGE LIGHTBOX */
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #2e1825e8;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#lightbox button {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 35px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .photo-card img {
+    height: 180px;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .apology-card h2 {
+    font-size: 27px;
+  }
+}
+
+@media(max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img {
+    height: 260px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HALAMAN PEMBUKA -->
+
+<section id="welcome">
+  <div class="welcome-card">
+    <div class="small-label">A little gift from my heart</div>
+    <h1 class="script">Hai Lia ❤️</h1>
+    <p>
+      Sa punya sesuatu yang ingin sa tunjukkan untuk ko.
+      <br>
+      Sebuah cerita kecil, kenangan, dan sa pu isi hati.
+    </p>
+    <button class="primary-btn" onclick="openWebsite()">
+      Buka Cerita ❤️
+    </button>
+    <p class="script" style="margin-top:30px;font-size:23px;">
+      Made with love, just for you
+    </p>
+  </div>
+</section>
+
+<!-- WEBSITE UTAMA -->
+
+<div id="main" class="hidden">
+
+<nav>
+  <div class="logo">Our Little Love Story ♡</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#gallery">Kenangan</a>
+    <a href="#apology">Permintaan Maaf</a>
+    <a href="#timeline">Cerita Kita</a>
+    <a href="#letter">Surat Cinta</a>
+  </div>
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+  <div>
+    <div class="heart-icon">❤️</div>
+    <div class="small-label">Welcome to our little world</div>
+    <h1 class="script">Our Little Love Story</h1>
+    <p>
+      Tidak semua cerita berjalan sempurna,<br>
+      tetapi setiap cerita punya kesempatan untuk menjadi lebih baik.
+    </p>
+    <p class="script" style="font-size:27px;margin-top:25px;">
+      You are still my favorite person.
+    </p>
+  </div>
+</section>
+
+<!-- GALERI FOTO -->
+
+<section class="section gallery-section" id="gallery">
+  <div class="section-title">
+    <h2>Setiap Foto Punya Cerita</h2>
+    <p>Beberapa kenangan indah yang selalu ingin aku simpan.</p>
+    <div class="divider-heart">♡ ─── ♥ ─── ♡</div>
+  </div>
+
+  <div class="gallery" id="galleryContainer">
+
+    <!-- Ganti gambar contoh dengan foto kalian -->
+    <div class="photo-card">
+      <img src="gambar/1.png"
+           alt="Kenangan 1" onclick="zoomImage(this.src)">
+      <p>Our favorite moment ♡</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="gambar/2.png"
+           alt="Kenangan 2" onclick="zoomImage(this.src)">
+      <p>Beautiful memories ♡</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="gambar/3.png"
+           alt="Kenangan 3" onclick="zoomImage(this.src)">
+      <p>Always ♡</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="gambar/4.png"
+           alt="Kenangan 4" onclick="zoomImage(this.src)">
+      <p>You ♡</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="gambar/5.png"
+           alt="Kenangan 5" onclick="zoomImage(this.src)">
+      <p>My happy place ♡</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="gambar/6.png"
+           alt="Kenangan 6" onclick="zoomImage(this.src)">
+      <p>Forever in my heart ♡</p>
+    </div>
+
+  </div>
+
+  <input type="file" id="photoInput" accept="image/*" multiple
+         style="display:none" onchange="addPhotos(event)">
+
+  <button class="add-photo" onclick="document.getElementById('photoInput').click()">
+    + Tambahkan Foto
+  </button>
+</section>
+
+<!-- PERMINTAAN MAAF -->
+
+<section class="section apology-section" id="apology">
+  <div class="section-title">
+    <h2>sa minta maaf e ❤️</h2>
+    <p>Ada sesuatu yang ingin sa sampaikan.</p>
+    <div class="divider-heart">♡ ─── ♥ ─── ♡</div>
+  </div>
+
+  <div class="apology-card">
+    <div class="big-heart">💗</div>
+
+    <h2 class="script">I'm Truly Sorry</h2>
+
+    <p>
+      sa tahu mungkin kata maaf tidak cukup untuk
+      menghapus rasa kecewa yang sudah sa buat. sa sadar
+      bahwa sa pernah melakukan kesalahan dan membuat ko sedih.
+    </p>
+
+    <p>
+      sa tidak pernah bermaksud membuat ko merasa tidak
+      dihargai atau terluka. sa tahu sa tidak sempurna,
+      masih banyak hal yang harus sa pelajari, terutama
+      bagaimana cara jaga ko perasaan.
+    </p>
+
+    <p>
+      sa minta maaf untuk semua sikap, perkataan, dan
+      perbuatan yang pernah menyakiti ko hati. sa tidak
+      ingin hanya berjanji, tetapi sa ingin membuktikan
+      melalui sikap dan perubahan yang nyata.
+    </p>
+
+    <p>
+      Terima kasih karena sudah hadir dalam sa hidup,
+      sudah memberikan banyak kenangan indah, dan sudah
+      menjadi seseorang yang begitu berarti untuk sa.
+    </p>
+
+    <p>
+      sa masih ingin berjalan sama-sama deng ko, membuat
+      lebih banyak kenangan, tertawa bersama, dan
+      melewati semuanya sama-sama.
+    </p>
+
+    <p>
+      sa sayang ko. sa minta maaf e. ❤️
+    </p>
+
+    <div class="signature">With all my love, yours ❤️</div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+
+<section class="section timeline-section" id="timeline">
+  <div class="section-title">
+    <h2>Perjalanan Cerita</h2>
+    <p>Setiap langkah punya kenangan tersendiri.</p>
+    <div class="divider-heart">♡ ─── ♥ ─── ♡</div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span>01 — FIRST MEETING</span>
+      <h3>Hari Pertama Bertemu</h3>
+      <p>
+        Hari pertama tong baku kenal, sa masih malu-malu pas di kampus, trus sa tanya ko pu teman.
+        eh begini malah sama-sama di biak, dari situ sudah mulai tambah rasa mulai tambah suka.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span>02 — GETTING CLOSER</span>
+      <h3>Dia</h3>
+      <p>
+        Dari percakapan sederhana, perlahan tumbuh rasa nyaman
+        yang buat sa ingin kenal de lebih jauh.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span>03 — OUR MOMENT</span>
+      <h3>Momen Pertama Kali Bersama</h3>
+      <p>
+        Awal sama-sama tu pas malam itu ko minta sa temani ko jalan-jalan,
+        dari situ sa paksakan diri untuk bisa bicara, padahal dalam hati malu-malu.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span>04 — BEST MEMORIES</span>
+      <h3>Kenangan Paling Indah</h3>
+      <p>
+        pas dimana setelah tong bicara empat mata baru sa tembak ko dengan keberanian penuh
+        walau dalam hati masih malu-malu.
+      </p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- SURAT CINTA -->
+
+<section class="section letter-section" id="letter">
+  <div class="section-title">
+    <h2>Surat Kecil Dari Hatiku</h2>
+    <p>Ada sebuah surat yang ingin ko baca.</p>
+  </div>
+
+  <div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="envelope-label">For My Love 💌</div>
+  </div>
+
+  <p class="script" style="font-size:23px;color:#bd718b;">
+    Sentuh amplop untuk membuka surat
+  </p>
+
+  <div class="letter-content" id="letterContent">
+    <h3>Untuk seseorang yang sa sayang...</h3>
+
+    <p>
+      Hallo lia,
+    </p>
+
+    <p>
+      sa mungkin bukan seseorang yang selalu bisa melakukan
+      semuanya dengan benar. kadang sa salah dalam bersikap,
+      salah dalam berbicara, dan tanpa sadar su buat terluka.
+    </p>
+
+    <p>
+      Tapi satu hal yang ingin ko tahu, ko pu hadir adalah
+      sesuatu yang sangat berarti dalam sa hidup. sa bersyukur
+      pernah kenal ko dan memiliki begitu banyak kenangan
+      dengan ko.
+    </p>
+
+    <p>
+      sa ingin belajar menjadi seseorang yang lebih baik,
+      bukan hanya untuk diriku sendiri, tetapi juga agar aku
+      bisa lebih menghargai ko perasaan.
+    </p>
+
+    <p>
+      sa tidak akan paksa ko untuk langsung memaafkan sa.
+      Ambil waktu yang kamu butuhkan. sa hanya berharap
+      suatu hari nanti tong bisa tertawa sama-sama lagi.
+    </p>
+
+    <p>
+      Terima kasih sudah membaca surat kecil ini.
+    </p>
+
+    <p class="script" style="font-size:25px;color:#bd718b;">
+      sa sayang lia, selalu. ❤️
+    </p>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+
+<section class="ending">
+  <div class="small-label">One last thing, my love</div>
+
+  <h2>
+    Kalau masih ada kesempatan, izinkan sa perbaiki semuanya.
+    sa tidak ingin kehilangan seseorang yang begitu berarti
+    dalam sa pu hidup. ❤️
+  </h2>
+
+  <p>
+    sa tidak minta ko untuk lupakan semuanya.
+    sa hanya ingin belajar perbaiki setiap kesalahan.
+    <br>
+    Apa pun ko pu jawaban, sa akan berusaha menghargainya.
+  </p>
+
+  <div class="answer-buttons">
+    <button onclick="showResponse('forgive')">
+      ko maafkan sa ❤️
+    </button>
+
+    <button onclick="showResponse('time')">
+      ko tidak bisa 🤍
+    </button>
+  </div>
+
+  <div id="response"></div>
+</section>
+
+<footer>
+  Dibuat untuk Lia<span>♥</span> dari Hati paling dalam.
+  <br><br>
+</footer>
+
+</div>
+
+<!-- MUSIK -->
+
+<audio id="bgMusic" loop>
+  <source src="Lagu/MASA INI, NANTI, DAN MASA INDAH LAINNNYA.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn hidden" id="musicButton"
+        onclick="toggleMusic()" title="Play/Pause Musik">
+  ♫
+</button>
+
+<!-- LIGHTBOX FOTO -->
+
+<div id="lightbox" onclick="closeLightbox()">
+  <button onclick="closeLightbox()">×</button>
+  <img id="lightboxImage" src="" alt="Foto kenangan">
+</div>
+
+<script>
+
+// MASUK KE WEBSITE
+
+function openWebsite() {
+  document.getElementById('welcome').classList.add('hidden');
+  document.getElementById('main').classList.remove('hidden');
+  document.getElementById('musicButton').classList.remove('hidden');
+
+  window.scrollTo(0, 0);
+
+  // Coba putar musik setelah interaksi pengguna
+  const music = document.getElementById('bgMusic');
+  music.play().then(() => {
+    document.getElementById('musicButton').textContent = '♫';
+  }).catch(() => {
+    document.getElementById('musicButton').textContent = '▶';
+  });
+}
+
+// MUSIK PLAY / PAUSE
+
+function toggleMusic() {
+  const music = document.getElementById('bgMusic');
+  const button = document.getElementById('musicButton');
+
+  if (music.paused) {
+    music.play().then(() => {
+      button.textContent = '♫';
+    }).catch(() => {
+      alert('Musik belum bisa diputar. Periksa file musik kamu.');
+    });
+  } else {
+    music.pause();
+    button.textContent = '▶';
+  }
+}
+
+// ANIMASI HATI
+
+const hearts = ['❤️', '💕', '💗', '💖', '♡'];
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (12 + Math.random() * 18) + 'px';
+  heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 700);
+
+// GALERI TAMBAH FOTO
+
+function addPhotos(event) {
+  const files = Array.from(event.target.files);
+  const gallery = document.getElementById('galleryContainer');
+
+  files.forEach(file => {
+    if (!file.type.startsWith('image/')) return;
+
+    const imageURL = URL.createObjectURL(file);
+
+    const card = document.createElement('div');
+    card.className = 'photo-card';
+
+    const img = document.createElement('img');
+    img.src = imageURL;
+    img.alt = 'Foto kenangan baru';
+    img.onclick = () => zoomImage(imageURL);
+
+    const caption = document.createElement('p');
+    caption.textContent = 'Our special moment ♡';
+
+    card.appendChild(img);
+    card.appendChild(caption);
+    gallery.appendChild(card);
+  });
+
+  event.target.value = '';
+}
+
+// ZOOM FOTO
+
+function zoomImage(src) {
+  document.getElementById('lightboxImage').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+// BUKA SURAT
+
+function openLetter() {
+  const envelope = document.getElementById('envelope');
+  const content = document.getElementById('letterContent');
+
+  envelope.classList.toggle('open');
+
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+    setTimeout(() => {
+      content.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100);
+  }
+}
+
+// RESPONS PASANGAN
+
+function showResponse(type) {
+  const response = document.getElementById('response');
+
+  response.style.display = 'block';
+
+  if (type === 'forgive') {
+    response.innerHTML =
+      'Terima kasih sudah berikan sa kesempatan. ' +
+      'sa akan berusaha jaga kepercayaan dan ko perasaan ' +
+      'dengan tindakan yang lebih baik. sa sayang ko. ❤️';
+  } else {
+    response.innerHTML =
+      'Tidak apa-apa, Lia. sa hargai ko pu perasaan. ' +
+      'Ambil waktu yang ko butuhkan. Aku tidak akan ' +
+      'paska ko. ' +
+      '🤍';
+  }
+
+  response.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+}
+
+</script>
+</body>
+</html>
